@@ -1,7 +1,4 @@
 <?php 
-edited
-
-
 $post = [
   'action' =>	'getDrugOthersCompanyDatabaseData',
 	'bRegex' =>	false,
@@ -79,19 +76,7 @@ echo "<pre>";
 var_dump($array['aaData']);
 echo "</pre>";
 die();*/
-foreach ($array['aaData'] as $key => $value) {
-	$value0 = str_replace("'", '&#039;', $value[0]);
-	$value1 = str_replace("'", '&#039;', $value[1]);
-	$value2 = str_replace("'", '&#039;', $value[2]);
-	$value3 = str_replace("'", '&#039;', $value[3]);
-	$value4 = str_replace("'", '&#039;', $value[4]);
-	$value5 = str_replace("'", '&#039;', $value[5]);
 
-	$sql = "INSERT INTO `homeopathic`( `id`, `manufacturer`, `name`, `type`, `generic_name_strength`, `dar`) VALUES ('".$value0."', '".$value1."', '".$value2."', '".$value3."', '".$value4."', '".$value5."')";
-
-	$stmt = $conn->prepare($sql);
-	$stmt->execute();
-}
 
 ?>
 
